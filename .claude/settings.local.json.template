@@ -1,0 +1,31 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.anthropic.com",
+    "ANTHROPIC_AUTH_TOKEN": "YOUR_ANTHROPIC_AUTH_TOKEN_HERE",
+    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-8",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-6",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4-5",
+    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_DISABLE_1M_CONTEXT": "0",
+    "GEMINI_KEY": "YOUR_GEMINI_KEY_HERE",
+    "CLAUDE_CODE_EFFORT_LEVEL": "max",
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
+    "OTEL_METRICS_EXPORTER": "otlp"
+  },
+
+  "permissions": {
+    "allow": []
+  },
+
+  "model": "sonnet",
+  "availableModels": [
+    "sonnet",
+    "opus",
+    "haiku",
+    "opusplan"
+  ],
+
+  "effortLevel": "max"
+}

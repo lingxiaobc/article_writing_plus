@@ -131,7 +131,27 @@ article_writing_plus/
   | `ANTHROPIC_DEFAULT_OPUS_MODEL` 等 | 指定模型 |
   | `GEMINI_KEY` | Gemini 生图密钥（信息图 / 封面） |
 
-  > ⚠️ `.claude/settings.local.json` 含**敏感凭据**。如果你要把项目放上 GitHub，先把它加进 `.gitignore`，并替换成你自己的密钥。
+  > ⚠️ `.claude/settings.local.json` 含**敏感凭据**，**已被 `.gitignore` 忽略、不会提交**——可放心填入真实密钥。
+
+#### 配置文件模板（settings.local.json）
+
+仓库提供 `.claude/settings.local.json.template`（**已纳入版本控制**），它是 `settings.local.json` 的模板，敏感字段已替换为占位符。上手三步：
+
+1. **复制**模板为正式文件：`cp .claude/settings.local.json.template .claude/settings.local.json`（Windows 下复制后重命名即可）。
+2. **填值**：把 `YOUR_ANTHROPIC_AUTH_TOKEN_HERE`、`YOUR_GEMINI_KEY_HERE` 等占位符换成你自己的值。
+3. 复制出来的 `settings.local.json` 会被自动忽略，**不会被提交**。
+
+字段速查（官方 API 与中转二选一）：
+
+| 字段 | 官方 Anthropic API | 中转 / relay（本项目作者所用） |
+|---|---|---|
+| `ANTHROPIC_BASE_URL` | `https://api.anthropic.com` | 中转地址（如 `https://<中转域名>/api/anthropic`） |
+| `ANTHROPIC_API_KEY` | 你的官方 API Key | 一般留空 |
+| `ANTHROPIC_AUTH_TOKEN` | 一般留空 | 中转下发的 Token |
+| `ANTHROPIC_DEFAULT_*_MODEL` | 官方模型 ID（如 `claude-opus-4-8`） | 中转提供的模型名 |
+| `GEMINI_KEY` | Gemini 生图密钥（信息图/封面用；不配图可留占位） | 同左 |
+
+> 用哪种就填哪种：官方 API 填 `ANTHROPIC_API_KEY`；中转填 `ANTHROPIC_AUTH_TOKEN` + `ANTHROPIC_BASE_URL`。图片生成才需要 `GEMINI_KEY`，纯写文章可忽略。
 
 ### 2. 可选：图片生成（信息图 / 封面）
 
