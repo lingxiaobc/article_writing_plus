@@ -311,6 +311,12 @@ article_writing_plus/
 - 加技能：在 `.claude/skills/` 新建文件夹 + `SKILL.md`（参考现有技能）。
 - 记得在 `CLAUDE.md` 的边界表 / 流程图里登记，保持规则一致。
 
+## 许可证（License）
+
+本项目采用 **MIT License** —— 可自由使用、复制、修改、合并、发布、分发、再授权乃至商用，唯一要求是保留版权与许可声明。详见 [`LICENSE`](./LICENSE)。
+
+> 个人风格参考（`.claude/reference/` 下的 `个人性格.md`、`个人语言习惯与表达特征.md`）与 `.claude/settings.local.json` 不在仓库内（已被忽略），不在本许可范围内。
+
 ---
 
 *项目原则、流程、规则以 `CLAUDE.md` 为准；本文档为快速上手导览。*
