@@ -19,11 +19,15 @@
 articles/*
 !articles/AI时代，普通人到底该不该焦虑被淘汰？/
 !articles/CLAUDE.md
+.claude/active-article
 
 # ---- 文章最终交付（成品内容，不提交）----
 # 每篇定稿 + 配图；这里以样本为例
 # 注意：前导 / 锚定到仓库根目录，避免误伤 articles/ 下的同名样本目录
 /AI时代，普通人到底该不该焦虑被淘汰？/
+
+# ---- 待发布文章暂存（成品内容，不提交）----
+/pending_articles/
 
 # ---- Python 构建产物（图片生成脚本运行时产生）----
 __pycache__/
